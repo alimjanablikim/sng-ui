@@ -1,0 +1,72 @@
+{
+  "$schema": "./registry-schema.json",
+  "name": "sng-ui",
+  "description": "ShadNG UI Component Registry",
+  "components": {
+    "cn": {
+      "name": "cn",
+      "description": "Utility for merging Tailwind CSS classes",
+      "files": ["lib/button/cn.ts"],
+      "dependencies": {
+        "npm": ["clsx", "tailwind-merge"]
+      }
+    },
+    "button": {
+      "name": "button",
+      "description": "Angular button component with class-based styling",
+      "files": ["lib/button/sng-button.ts"],
+      "dependencies": {
+        "internal": ["cn"]
+      }
+    },
+    "code-block": {
+      "name": "code-block",
+      "description": "Code block component with VS Code-accurate syntax highlighting powered by Shiki. Includes copy button and language header.",
+      "files": ["lib/code-block/sng-code-block.ts", "lib/code-block/index.ts"],
+      "dependencies": {
+        "npm": ["shiki"],
+        "internal": ["cn"]
+      },
+      "note": "Requires 'shiki' npm package. Supports 200+ languages and all VS Code themes."
+    },
+    "preview-box": {
+      "name": "preview-box",
+      "description": "Tabbed preview component with Preview, Code, and Source tabs. Perfect for documentation sites.",
+      "files": ["lib/preview-box/sng-preview-box.ts"],
+      "dependencies": {
+        "internal": ["cn", "code-block"],
+        "npm": ["shiki"]
+      },
+      "note": "Uses code-block for syntax-highlighted code display in Code/Source tabs."
+    },
+    "accordion": {
+      "name": "accordion",
+      "description": "Angular accordion component for collapsible content sections. Built with Angular signals for accessibility.",
+      "files": [
+        "lib/accordion/sng-accordion.ts",
+        "lib/accordion/sng-accordion-item.ts",
+        "lib/accordion/sng-accordion-trigger.ts",
+        "lib/accordion/sng-accordion-content.ts",
+        "lib/accordion/index.ts"
+      ],
+      "dependencies": {
+        "internal": ["cn"]
+      },
+      "note": "Includes smooth expand/collapse animations. Supports single/multiple mode and collapsible options."
+    },
+    "alert": {
+      "name": "alert",
+      "description": "Angular alert component for displaying important messages, errors, and notifications. Supports icons and multiple variants via Tailwind classes.",
+      "files": [
+        "lib/alert/sng-alert.ts",
+        "lib/alert/sng-alert-title.ts",
+        "lib/alert/sng-alert-description.ts",
+        "lib/alert/index.ts"
+      ],
+      "dependencies": {
+        "internal": ["cn"]
+      },
+      "note": "Purely presentational component. No Angular CDK required. Use Alert Dialog for confirmation modals."
+    }
+  }
+}

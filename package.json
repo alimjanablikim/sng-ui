@@ -1,0 +1,64 @@
+{
+  "name": "@shadng/sng-ui",
+  "version": "1.0.6",
+  "description": "Angular UI components inspired by shadcn/ui design patterns.",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/alimjanablikim/sng-ui.git"
+  },
+  "homepage": "https://shadng.js.org/docs",
+  "bugs": {
+    "url": "https://github.com/alimjanablikim/sng-ui/issues"
+  },
+  "keywords": [
+    "angular",
+    "ui",
+    "components",
+    "tailwindcss",
+    "shadcn"
+  ],
+  "bin": {
+    "sng-ui": "cli/sng-ui.js"
+  },
+  "engines": {
+    "node": ">=20.11.0",
+    "npm": ">=10.0.0"
+  },
+  "peerDependencies": {
+    "@angular/common": "^21.0.0",
+    "@angular/core": "^21.0.0",
+    "@angular/platform-browser": "^21.0.0",
+    "shiki": "^3.0.0"
+  },
+  "peerDependenciesMeta": {
+    "shiki": {
+      "optional": true
+    }
+  },
+  "dependencies": {
+    "tslib": "^2.3.0"
+  },
+  "sideEffects": false,
+  "publishConfig": {
+    "access": "public"
+  },
+  "scripts": {
+    "test:cli": "node --test cli/sng-ui.cli.spec.cjs",
+    "pack:check": "npm pack --dry-run"
+  },
+  "files": [
+    "src/",
+    "!src/**/*.spec.ts",
+    "!src/**/*.stories.ts",
+    "cli/",
+    "!cli/*.spec.cjs",
+    "registry.json",
+    "README.md",
+    "LICENSE",
+    "ng-package.json",
+    "tsconfig.json",
+    "tsconfig.lib.json",
+    "tsconfig.lib.prod.json"
+  ]
+}

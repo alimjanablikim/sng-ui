@@ -1,0 +1,11 @@
+# dev/test artifacts
+**/*.spec.ts
+**/*.stories.ts
+cli/*.spec.cjs
+
+# local/dev files
+.DS_Store
+src/**/.DS_Store
+
+# docs are for repository, not npm tarball
+docs/

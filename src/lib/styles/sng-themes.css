@@ -1,0 +1,164 @@
+/**
+ * ShadNG Default Theme
+ * ====================
+ * Out-of-box theme that works immediately without configuration.
+ *
+ * USAGE:
+ * ──────
+ * Import in your styles.css:
+ *   @import 'sng-ui/styles/default-theme.css';
+ *
+ * Or in angular.json styles array:
+ *   "styles": ["node_modules/sng-ui/styles/default-theme.css", "src/styles.css"]
+ *
+ * CUSTOMIZATION (optional):
+ * ─────────────────────────
+ * Override any variable in your own CSS:
+ *   :root {
+ *     --primary: #2563eb;  // Change to blue
+ *   }
+ *
+ * Or create a full custom theme - see docs for guide.
+ *
+ * DARK MODE:
+ * ──────────
+ * Add class="dark" to <html> element.
+ */
+
+/* =============================================================================
+   Light Theme (Default)
+   ============================================================================= */
+:root {
+  /* Core */
+  --background: #ffffff;
+  --foreground: #09090b;
+
+  /* Surfaces */
+  --card: #ffffff;
+  --card-foreground: #09090b;
+  --popover: #ffffff;
+  --popover-foreground: #09090b;
+
+  /* Actions */
+  --primary: #18181b;
+  --primary-foreground: #fafafa;
+  --secondary: #f4f4f5;
+  --secondary-foreground: #18181b;
+  --destructive: #ef4444;
+  --destructive-foreground: #fafafa;
+
+  /* UI Elements */
+  --muted: #f4f4f5;
+  --muted-foreground: #71717a;
+  --accent: #f4f4f5;
+  --accent-foreground: #18181b;
+
+  /* Borders & Inputs */
+  --border: #e4e4e7;
+  --input: #e4e4e7;
+  --ring: #18181b;
+
+  /* Interaction */
+  --hover: #f4f4f5;
+
+  /* Sidebar (optional) */
+  --sidebar-background: #fafafa;
+  --sidebar-foreground: #52525b;
+  --sidebar-primary: #18181b;
+  --sidebar-primary-foreground: #fafafa;
+  --sidebar-accent: #f4f4f5;
+  --sidebar-accent-foreground: #18181b;
+  --sidebar-border: #e4e4e7;
+  --sidebar-ring: #18181b;
+}
+
+/* =============================================================================
+   Dark Theme
+   ============================================================================= */
+.dark {
+  /* Core */
+  --background: #09090b;
+  --foreground: #fafafa;
+
+  /* Surfaces */
+  --card: #09090b;
+  --card-foreground: #fafafa;
+  --popover: #09090b;
+  --popover-foreground: #fafafa;
+
+  /* Actions (inverted) */
+  --primary: #fafafa;
+  --primary-foreground: #18181b;
+  --secondary: #27272a;
+  --secondary-foreground: #fafafa;
+  --destructive: #ef4444;
+  --destructive-foreground: #fafafa;
+
+  /* UI Elements */
+  --muted: #3f3f46;
+  --muted-foreground: #c8c8cf;
+  --accent: #3f3f46;
+  --accent-foreground: #fafafa;
+
+  /* Borders & Inputs */
+  --border: #52525b;
+  --input: #71717a;
+  --ring: #d4d4d8;
+
+  /* Interaction */
+  --hover: #2a2a2e;
+
+  /* Sidebar */
+  --sidebar-background: #18181b;
+  --sidebar-foreground: #fafafa;
+  --sidebar-primary: #3b82f6;
+  --sidebar-primary-foreground: #ffffff;
+  --sidebar-accent: #3f3f46;
+  --sidebar-accent-foreground: #fafafa;
+  --sidebar-border: #3f3f46;
+  --sidebar-ring: #d4d4d8;
+}
+
+/* =============================================================================
+   Tailwind Theme Mapping
+   Maps CSS variables to Tailwind utility classes (bg-primary, text-foreground, etc.)
+   ============================================================================= */
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-hover: var(--hover);
+  --color-sidebar: var(--sidebar-background);
+  --color-sidebar-background: var(--sidebar-background);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-ring: var(--sidebar-ring);
+}
+
+/* =============================================================================
+   Base Styles
+   ============================================================================= */
+body {
+  background-color: var(--background);
+  color: var(--foreground);
+}
